@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<header>The Lyon Banking Contract</header>
+<div class="centered">
+    <h1>An Introduction to Ethereum</h1>
+    <h3>A decentralized an anonymous new crypto-currency.</h3>
+    <p>The ethereum platform is, shortly, a distributed computing network that creates and manages a
+        indisputable ledger of transactions. Additionally it provides some functionality that allows
+        programs to be compiled and run on the network, by the computers hosting the network. Making
+        transactions requires ether, the native currency on the platform. Like a car, the ethereum
+        platform runs on gas and ether is the fuel.
+    </p>
+    <p>Ethereum uses <a
+        href="https://github.com/ethereumbuilders/ethereum101/wiki/Public-Key-Cryptography">public-key
+        cryptography</a> (it is a crypto-coin after all) that works very
+        similarly to message encryption. A user gives out their public key and others use that to
+        encrypt the message. Now that it has been encrypted with the public key, the only way to get
+        anything meaningful out of the encrypted message is to decrypt it with the private key. The
+        ethereum platform works in a similar manner. When an account is generated, an algorithm
+        spits out a random public key and its corresponding private key. Only the owner of the
+        private key can make any transactions on the behalf of the account. This includes sending
+        ether, which means that we have uncovered a glaring vulnerability.
+    </p>
+</div>
+<div class="centered">
+    <h1>The Current Security Landscape</h1>
+    <h3>A central and catastrophic point of failure.</h3>
+    <p>In its current form, ethereum wallets have a single point of failure. Anyone with access to a
+        wallet's private key has full control over all the funds in that account meaning any
+        security breach is catastrophic and irreversible. There are multiple methods that we can use
+        to mitigate these problems, all of which share the same shortcoming. One of
+        the most common alternatives is splitting your funds into hot-and-cold wallets. Acting
+        similarly to a checking-and-savings account, a cold wallet stores the majority of your
+        assets, letting you manage them from an offline or air-gapped wallet to ensure isolation
+        from malicious software. The primary ideology here is that if your "hot" wallet, or checking
+        account were compromised, your "cold" wallet, or savings account would remain safe.
+        This method still has a central point of failure. If a key is compromised (or lost)
+        funds are irreversibly gone. If you save the key in only one place, you risk losing the key
+        (ex. from a fire); the only way to counter this is to save the key in multiple places which
+        opens up another vulnerability: theft, physical or electronic.
+    </p>
+    <p>To patch this vulnerability, it would be beneficial to take the human out of the equation.
+        Luckily, as mentioned briefly in the introduction, because ethereum is a computing platform,
+        rather than just another block chain crypto-currency, we can create a solution that
+        completely absolves the risk of losing a key or worse. This revolves around a class-like
+        structure on the ethereum block chain: the smart contract. The public and immutable ledger
+        that ethereum is built on ensures that any code fused with it operates exactly as defined,
+        with no way of modifying it. This contract then exists on the decentralized network, ready
+        to be used by anyone, and then executed by everyone.
+    </p>
+</div>
+
+<div class="centered">
+    <h1>The Lyon Banking Contract</h1>
+    <h3>A safe banking method to store the ethereum of multiple users.</h3>
+    <p>Smart contracts have all the rights of a regular account, but are controlled by code. This
+        means that they may hold and spend ether, just like a regular account. Additionally, a
+        standard known as <a href="https://github.com/ethereum/EIPs/issues/20">ERC20</a> has defined
+        what is now known as tokens or coins that exist as sub-currency on the platform. These can
+        be created by any contract, and the contract needs only support a small set of functions to
+        make it ERC-20 compliant. Using a combination of the contracts' account-like properties,
+        some unique functions, and our own token, we can safely trade ether with the contract, and
+        in return receive tokens that have no value but can be traded back in for the original
+        deposit. As it stands, nothing would stop a potential attacker from cashing out the tokens,
+        making it no safer than a cold wallet; that is assuming they know that the account even
+        has the tokens in the first place. To prevent this, we implement some additional fail-safes.
+    </p>
+    <p>The system relies on three separate layers, outlined below.
+    </p>
+</div>
+
+<div id="infographic">
+    <div id="management" class="shifted front">
+        <div class="centered columns">
+            <div>
+                <h2>Managers</h2>
+                <p>
+                    Two trusted addresses are assigned the role of managing the withdrawals. Any
+                    attempts to cash in tokens will then need to be approved manually.
+                </p>
+                <p>
+                    The third address is safely stored such that both managers must be present to
+                    access it. This means that a compromised manager can be swapped out for a new,
+                    (secure) address with zero asset loss.
+                </p>
+            </div>
+            <div>
+                <img src="img/management.svg"/>
+            </div>
+        </div>
+    </div>
+    <div id="transactions" class="shifted">
+        <div class="centered columns">
+            <div>
+                <h2>Transactions</h2>
+                <p>
+                    A withdrawal request is made, and upon confirmation the ether is deposited back
+                    into the owner's account and the equivalent tokens retracted. Any transaction
+                    is cancellable.
+                </p>
+
+            </div>
+            <div>
+                <img src="img/transactions.svg" class="double"/>
+            </div>
+        </div>
+    </div>
+    <div id="users" class="shifted front">
+        <div class="centered columns">
+            <div>
+                <h2>Users</h2>
+                <p>
+                    Funds are deposited into the bank in return for tokens. These cannot be
+                    cashed in or traded without approval from the managers, meaning the tokens
+                    are theft resistant.
+                </p>
+                <p>
+                    The tokens mean that if a user were to lose their address, their cold funds are
+                    safe inside the bank and the tokens can be transferred easily to a new address.
+                </p>
+
+            </div>
+            <div>
+                <img src="img/users.svg"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="centered">
+    <h1>Events</h1>
+    <h3>Communication between the decentralized and the centralized.</h3>
+    <p>
+        The blockchain is a list of blocks which are fundamentally lists of transactions. Each
+        transaction has an attached receipt which contains zero or more log entries. Log entries
+        represent the result of events having fired from a smart contract.
+    </p>
+    <p>
+        Events are dispatched signals the smart contracts can fire. DApps, or anything connected to
+        Ethereum JSON-RPC API, can listen to these events and act accordingly. Event can be indexed,
+        so that the event history is searchable later.
+    </p>
+    <h2>
+        Accounts
+    </h2>
+    <ul>
+        <li>
+            <header>OwnerChange</header>
+            Called when one of the active keys changes to a new owner.
+        </li>
+        <li>
+            <header>MemberAdded</header>
+            Called when a new member is added to the list of members.
+        </li>
+        <li>
+            <header>MemberRemoved</header>
+            Called when a member is removed from the list of members.
+        </li>
+    </ul>
+    <h2>
+        Transactions
+    </h2>
+    <ul>
+        <li>
+            <header>WithdrawalRequest</header>
+            Called when a withdrawal from the bank is requested.
+        </li>
+        <li>
+            <header>WithdrawalConfirmed</header>
+            Called when a withdrawal from the bank is confirmed by both managers.
+        </li>
+        <li>
+            <header>TransferRequest</header>
+            Called when a transfer between accounts is requested.
+        </li>
+        <li>
+            <header>TransferConfirmed</header>
+            Called when a transfer between accounts is confirmed.
+        </li>
+        <li>
+            <header>Deposit</header>
+            Called when money is successfully deposited into the bank.
+        </li>
+        <li>
+            <header>FailedDeposit</header>
+            Called when a non-member deposits money into the contract.
+        </li>
+    </ul>
+</div>
+
+<div class="centered">
+    <h1>Sources</h1>
+    <h3>Useful resources.</h3>
+    <ul>
+        <li><a href="https://github.com/ConsenSys/MultiSigWallet/blob/master/contracts/solidity/MultiSigWallet.sol">https://github.com/ConsenSys/MultiSigWallet/blob/master/contracts/solidity/MultiSigWallet.sol</a></li>
+        <li><a href="https://github.com/ethereum/dapp-bin/blob/master/wallet/wallet.sol">https://github.com/ethereum/dapp-bin/blob/master/wallet/wallet.sol</a></li>
+        <li><a href="https://ethereum.stackexchange.com/questions/2940/where-can-i-find-some-solidity-smart-contract-source-code-examples">https://ethereum.stackexchange.com/questions/2940/where-can-i-find-some-solidity-smart-contract-source-code-examples</a></li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l
+        b[l] || (b[l] =
+            function () {(b[l].q = b[l].q || []).push(arguments)})
+        b[l].l = +new Date
+        e = o.createElement(i)
+        r = o.getElementsByTagName(i)[0]
+        e.src = 'https://www.google-analytics.com/analytics.js'
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'))
+    ga('create', 'UA-XXXXX-X', 'auto')
+    ga('send', 'pageview')
+</script>
+</body>
+</html>
