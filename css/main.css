@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: rgba(0,0,0,0.87);
     font-size: 1em;
     line-height: 1.4;
     font-family: Nunito, sans-serif;
@@ -21,24 +21,48 @@ body {
     overflow-x: hidden;
 }
 
-body>header {
+body > header {
     color: #2db096;
     font-weight: 700;
     text-align: center;
-    margin: 2em;
+    box-shadow: inset 0 -4px 5px -5px rgba(0, 0, 0, 0.2);
+    padding: 3em 0;
     font-size: 3em;
+    display: flex;
+    background: url(../img/squiggles.svg);
+    border-bottom: 5px solid #FFB941;
+<!-- border-image: linear-gradient(to right, #2db096 25 %, #FFB941 25 %, #FFB941 50 %, #3A6BB4 50 %, #3A6BB4 75 %, #FF8C41 75 %) 5; -->
 }
 
-body>.centered {
-    margin: 100px auto;
+body > header > div {
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+    padding: 0.1em 0.5em;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-body>#infographic {
-    margin: 50px 0;
+a {
+    color: #2db096;
+    text-decoration: none;
+}
+
+body > .centered {
+    margin: 2em auto;
+}
+
+body > #infographic {
+    margin: 6em auto;
 }
 
 #infographic h1 {
     color: inherit;
+}
+
+img {
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
 }
 
 #management img {
@@ -51,7 +75,7 @@ body>#infographic {
 
 #users {
     background-color: #3A6BB4;
-    color: rgba(255,255,255,0.87);
+    color: white;
 }
 
 #users img {
@@ -63,7 +87,29 @@ body>#infographic {
     overflow: visible;
 }
 
-#transactions>div {
+ul.cards li {
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
+}
+
+ul.cards li {
+    border-left: 4px solid black;
+}
+
+ul.cards li:nth-child(3n+1) {
+    border-left-color: #FFB941;
+}
+
+ul.cards li:nth-child(3n+2) {
+    border-left-color: #FF8C41;
+}
+
+ul.cards li:nth-child(3n+3) {
+    border-left-color: #3A6BB4;
+}
+
+#transactions > div {
     overflow: visible;
 }
 
@@ -78,13 +124,12 @@ body>#infographic {
     inset 0 -8px 8px -8px #696868;
 }
 
-.shifted>div {
+.shifted > div {
     transform: rotate(5deg);
 }
 
 img.double {
-    max-height: 300px !important;
-    margin-top: -120px !important;
+    margin-top: -150px !important;
     margin-bottom: -90px !important;
     z-index: 100;
 }
@@ -114,7 +159,7 @@ ul li header {
     align-items: center;
 }
 
-.columns>div {
+.columns > div {
     flex-grow: 1;
     width: 0;
 }

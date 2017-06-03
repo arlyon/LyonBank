@@ -3,22 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Lyon Banking Contract</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="img/logo.svg">
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hljs.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-<header>The Lyon Banking Contract</header>
+<header>
+    <div>The Lyon Banking Contract</div>
+</header>
 <div class="centered">
     <h1>An Introduction to Ethereum</h1>
-    <h3>A decentralized an anonymous new crypto-currency.</h3>
+    <h3>A decentralized and anonymous new crypto-currency.</h3>
     <p>The ethereum platform is, shortly, a distributed computing network that creates and manages a
         indisputable ledger of transactions. Additionally it provides some functionality that allows
         programs to be compiled and run on the network, by the computers hosting the network. Making
@@ -70,7 +74,8 @@
     <h3>A safe banking method to store the ethereum of multiple users.</h3>
     <p>Smart contracts have all the rights of a regular account, but are controlled by code. This
         means that they may hold and spend ether, just like a regular account. Additionally, a
-        standard known as <a href="https://github.com/ethereum/EIPs/issues/20">ERC20</a> has defined
+        standard known as <a href="https://github.com/ethereum/EIPs/issues/20">ERC-20</a> has
+        defined
         what is now known as tokens or coins that exist as sub-currency on the platform. These can
         be created by any contract, and the contract needs only support a small set of functions to
         make it ERC-20 compliant. Using a combination of the contracts' account-like properties,
@@ -148,68 +153,93 @@
     <p>
         The blockchain is a list of blocks which are fundamentally lists of transactions. Each
         transaction has an attached receipt which contains zero or more log entries. Log entries
-        represent the result of events having fired from a smart contract.
-    </p>
-    <p>
-        Events are dispatched signals the smart contracts can fire. DApps, or anything connected to
-        Ethereum JSON-RPC API, can listen to these events and act accordingly. Event can be indexed,
-        so that the event history is searchable later.
+        represent the result of events having fired from a smart contract. Events are dispatched
+        signals the smart contracts can fire. Programs can then listen to
+        these events using an api, and act accordingly.
     </p>
     <h2>
-        Accounts
+        Account Related
     </h2>
-    <ul>
+    <ul class="cards">
         <li>
-            <header>OwnerChange</header>
-            Called when one of the active keys changes to a new owner.
+            <header>ManagerChange</header>
+            This event is called by the function that changes managers in the event of one of the
+            keys getting lost or compromised.
         </li>
         <li>
             <header>MemberAdded</header>
-            Called when a new member is added to the list of members.
+            This event is called when a new account is added to the list of members, and their
+            address is added to the token array.
         </li>
         <li>
             <header>MemberRemoved</header>
-            Called when a member is removed from the list of members.
+            This event is called when an account is removed from the list of members, and their
+            address is removed from the token array.
         </li>
     </ul>
     <h2>
-        Transactions
+        Transaction Related
     </h2>
-    <ul>
+    <ul class="cards">
         <li>
             <header>WithdrawalRequest</header>
-            Called when a withdrawal from the bank is requested.
+            This event is called when a withdrawal from the bank is requested.
         </li>
         <li>
             <header>WithdrawalConfirmed</header>
-            Called when a withdrawal from the bank is confirmed by both managers.
+            This event is called when a withdrawal from the bank is confirmed by both managers.
         </li>
         <li>
             <header>TransferRequest</header>
-            Called when a transfer between accounts is requested.
+            This event is called when a transfer between accounts is requested.
         </li>
         <li>
-            <header>TransferConfirmed</header>
-            Called when a transfer between accounts is confirmed.
+            <header>Transfer - ERC20</header>
+            This event is called when a transfer between accounts is confirmed.
         </li>
         <li>
             <header>Deposit</header>
-            Called when money is successfully deposited into the bank.
+            This event is called when money is successfully deposited into the bank.
         </li>
         <li>
             <header>FailedDeposit</header>
-            Called when a non-member deposits money into the contract.
+            This event is called when a non-member deposits money into the contract.
         </li>
     </ul>
 </div>
 
 <div class="centered">
-    <h1>Sources</h1>
+    <h1>Implementation</h1>
+    <h3>The software behind the smart contract.</h3>
+    <p>
+        With our intentions clearly presented, we are ready to implement it. With an ERC-20 token
+        as the basis, we will start by implementing the methods defined in the standard. These are:
+    <pre><code>// core functionality
+function totalSupply() returns (uint256 totalSupply); // the total number of tokens in circulation
+function balanceOf(address owner) returns (uint256 balance); // the balance of a particular address
+function transfer(address to, uint256 value) returns (bool success); // transfer a users tokens to another address
+// allow other users to take money out on your behalf
+function transferFrom(address from, address to, uint256 value) returns (bool success); // transfer from one address to another
+function approve(address spender, uint256 value) returns (bool success); // approve an address to withdraw a certain amount
+function allowance(address owner, address spender) returns (uint256 remaining); // check how much you can withdraw from another account
+        </code></pre>
+    </p>
+</div>
+
+<div class="centered">
+    <h1>Resources</h1>
     <h3>Useful resources.</h3>
     <ul>
-        <li><a href="https://github.com/ConsenSys/MultiSigWallet/blob/master/contracts/solidity/MultiSigWallet.sol">https://github.com/ConsenSys/MultiSigWallet/blob/master/contracts/solidity/MultiSigWallet.sol</a></li>
-        <li><a href="https://github.com/ethereum/dapp-bin/blob/master/wallet/wallet.sol">https://github.com/ethereum/dapp-bin/blob/master/wallet/wallet.sol</a></li>
-        <li><a href="https://ethereum.stackexchange.com/questions/2940/where-can-i-find-some-solidity-smart-contract-source-code-examples">https://ethereum.stackexchange.com/questions/2940/where-can-i-find-some-solidity-smart-contract-source-code-examples</a></li>
+        <li><a
+            href="https://github.com/ConsenSys/MultiSigWallet/blob/master/contracts/solidity/MultiSigWallet.sol">https://github.com/ConsenSys/MultiSigWallet/blob/master/contracts/solidity/MultiSigWallet.sol</a>
+        </li>
+        <li><a href="https://github.com/ethereum/dapp-bin/blob/master/wallet/wallet.sol">https://github.com/ethereum/dapp-bin/blob/master/wallet/wallet.sol</a>
+        </li>
+        <li><a
+            href="https://ethereum.stackexchange.com/questions/2940/where-can-i-find-some-solidity-smart-contract-source-code-examples">https://ethereum.stackexchange.com/questions/2940/where-can-i-find-some-solidity-smart-contract-source-code-examples</a>
+        </li>
+        <li><a href="http://paletton.com/#uid=73c0u0knP-xdROljkGttgvOvuo+">http://paletton.com/#uid=73c0u0knP-xdROljkGttgvOvuo+</a>
+        </li>
     </ul>
 </div>
 
@@ -217,21 +247,155 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script>
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l
-        b[l] || (b[l] =
-            function () {(b[l].q = b[l].q || []).push(arguments)})
-        b[l].l = +new Date
-        e = o.createElement(i)
-        r = o.getElementsByTagName(i)[0]
-        e.src = 'https://www.google-analytics.com/analytics.js'
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'))
-    ga('create', 'UA-XXXXX-X', 'auto')
-    ga('send', 'pageview')
+    function hljsDefineSolidity (hljs) {
+        var SOL_KEYWORDS = {
+            keyword: 'var bool string ' +
+            'int uint int8 uint8 int16 uint16 int24 uint24 int32 uint32 ' +
+            'int40 uint40 int48 uint48 int56 uint56 int64 uint64 ' +
+            'int72 uint72 int80 uint80 int88 uint88 int96 uint96 ' +
+            'int104 uint104 int112 uint112 int120 uint120 int128 uint128 ' +
+            'int136 uint136 int144 uint144 int152 uint152 int160 uint160 ' +
+            'int168 uint168 int176 uint176 int184 uint184 int192 uint192 ' +
+            'int200 uint200 int208 uint208 int216 uint216 int224 uint224 ' +
+            'int232 uint232 int240 uint240 int248 uint248 int256 uint256 ' +
+            'byte bytes bytes1 bytes2 bytes3 bytes4 bytes5 bytes6 bytes7 bytes8 ' +
+            'bytes9 bytes10 bytes11 bytes12 bytes13 bytes14 bytes15 bytes16 ' +
+            'bytes17 bytes18 bytes19 bytes20 bytes21 bytes22 bytes23 bytes24 ' +
+            'bytes25 bytes26 bytes27 bytes28 bytes29 bytes30 bytes31 bytes32 ' +
+            'enum struct mapping address ' +
+
+            'new delete ' +
+            'if else for while continue break return throw ' +
+
+            'function modifier event ' +
+            'constant anonymous indexed ' +
+            'storage memory ' +
+            'external public internal private returns ' +
+
+            'import using ' +
+            'contract library ' +
+            'assembly',
+            literal: 'true false ' +
+            'wei szabo finney ether ' +
+            'second seconds minute minutes hour hours day days week weeks year years',
+            built_in: 'self ' +   // :NOTE: not a real keyword, but a convention used in storage manipulation libraries
+            'this super selfdestruct ' +
+            'now ' +
+            'msg ' +
+            'block ' +
+            'tx ' +
+            'sha3 sha256 ripemd160 erecover addmod mulmod ' +
+            // :NOTE: not really toplevel, but advantageous to have highlighted as if reserved to
+            //        avoid newcomers making mistakes due to accidental name collisions.
+            'send call callcode delegatecall',
+        }
+
+        var SOL_NUMBER = {
+            className: 'number',
+            variants: [
+                {begin: '\\b(0[bB][01]+)'},
+                {begin: '\\b(0[oO][0-7]+)'},
+                {begin: hljs.C_NUMBER_RE},
+            ],
+            relevance: 0,
+        }
+
+        var SOL_FUNC_PARAMS = {
+            className: 'params',
+            begin: /\(/, end: /\)/,
+            excludeBegin: true,
+            excludeEnd: true,
+            keywords: SOL_KEYWORDS,
+            contains: [
+                hljs.C_LINE_COMMENT_MODE,
+                hljs.C_BLOCK_COMMENT_MODE,
+                hljs.APOS_STRING_MODE,
+                hljs.QUOTE_STRING_MODE,
+                SOL_NUMBER,
+            ],
+        }
+
+        var SOL_RESERVED_MEMBERS = {
+            begin: /\.\s*/,  // match any property access up to start of prop
+            end: /[^A-Za-z0-9$_\.]/,
+            excludeBegin: true,
+            excludeEnd: true,
+            keywords: {
+                built_in: 'gas value send call callcode delegatecall balance length push',
+            },
+            relevance: 2,
+        }
+
+        function makeBuiltinProps (obj, props) {
+            return {
+                begin: obj + '\\.\\s*',
+                end: /[^A-Za-z0-9$_\.]/,
+                excludeBegin: false,
+                excludeEnd: true,
+                keywords: {
+                    built_in: obj + ' ' + props,
+                },
+                contains: [
+                    SOL_RESERVED_MEMBERS,
+                ],
+                relevance: 10,
+            }
+        }
+
+        return {
+            aliases: ['sol'],
+            keywords: SOL_KEYWORDS,
+            contains: [
+                // basic literal definitions
+                hljs.APOS_STRING_MODE,
+                hljs.QUOTE_STRING_MODE,
+                hljs.C_LINE_COMMENT_MODE,
+                hljs.C_BLOCK_COMMENT_MODE,
+                SOL_NUMBER,
+                { // functions
+                    className: 'function',
+                    beginKeywords: 'function modifier event', end: /[{;]/, excludeEnd: true,
+                    contains: [
+                        hljs.inherit(hljs.TITLE_MODE, {
+                            begin: /[A-Za-z$_][0-9A-Za-z$_]*/,
+                            keywords: SOL_KEYWORDS,
+                        }),
+                        SOL_FUNC_PARAMS,
+                    ],
+                    illegal: /\[|%/,
+                },
+                // built-in members
+                makeBuiltinProps('msg', 'data sender sig'),
+                makeBuiltinProps('block', 'blockhash coinbase difficulty gaslimit number timestamp '),
+                makeBuiltinProps('tx', 'gasprice origin'),
+                SOL_RESERVED_MEMBERS,
+                { // contracts & libraries
+                    className: 'class',
+                    beginKeywords: 'contract library', end: /[{]/, excludeEnd: true,
+                    illegal: /[:"\[\]]/,
+                    contains: [
+                        {beginKeywords: 'is'},
+                        hljs.UNDERSCORE_TITLE_MODE,
+                        SOL_FUNC_PARAMS,
+                    ],
+                },
+                { // imports
+                    beginKeywords: 'import', end: '[;$]',
+                    keywords: 'import * from as',
+                    contains: [
+                        hljs.APOS_STRING_MODE,
+                        hljs.QUOTE_STRING_MODE,
+                    ],
+                },
+            ],
+            illegal: /#/,
+        }
+    }
+
+    hljs.registerLanguage('solidity', hljsDefineSolidity)
+    hljs.initHighlightingOnLoad()
 </script>
 </body>
 </html>
