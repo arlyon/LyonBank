@@ -157,11 +157,14 @@ ul li header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
 }
 
-.columns > div {
+.columns > * {
     flex-grow: 1;
     width: 0;
+    min-width: 200px;
 }
 
 h1, h2, h3 {
@@ -185,15 +188,21 @@ div > :last-child {
     margin-bottom: 0;
 }
 
-@media screen and (min-width: 768px) {
-    .centered {
-        width: 723px;
+@media screen and (max-width: 650px) {
+    .centered img {
+        display: none;
     }
 }
 
 @media screen and (max-width: 767px) {
     .centered {
-        width: calc(95%);
+        width: 95vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .centered {
+        width: 723px;
     }
 }
 
