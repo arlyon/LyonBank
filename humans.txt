@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Alexander Lyon -- Webmaster -- @notwitter 
 
 # THANKS
 
-    <name>
+    Myself
 
 # TECHNOLOGY COLOPHON
 
