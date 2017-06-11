@@ -1,0 +1,47 @@
+{
+    "modifiers": {
+        "isManager": true,
+        "isMember": true,
+        "isOpen": true,
+        "hasEnoughTokens": true,
+        "transactionExists": true
+    },
+    "events": {
+        "CreateTransaction": true,
+        "ApprovedTransaction": true,
+        "CompletedTransaction": true,
+        "Deposit": true,
+        "SelfDistructVote": true,
+        "MemberAdded": true,
+        "MemberRemove": true,
+        "ManagerChange": true
+    },
+    "erc20": {
+        "totalSupply":true,
+        "balanceOf":true
+    },
+    "extras": {
+        "SelfDistruct": true
+    },
+    "transaction management": {
+        "createTransaction": true,
+        "approveTransaction": true,
+        "completeTransaction": true,
+        "transferTokens": true
+    },
+    "manager managerment": {
+        "createManagementVote": false,
+        "approveManagementVote": false,
+        "completeManagementVote": false
+    },
+    "transfer": {
+        "null": true,
+        "withdraw": true,
+        "transfer": true
+    },
+    "allowance": {
+        "transferFrom":false,
+        "approve":false,
+        "allowance":false
+    }
+}
