@@ -59,7 +59,7 @@ body > #infographic {
     color: inherit;
 }
 
-img {
+img, svg {
     user-drag: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -128,7 +128,7 @@ ul.cards li:nth-child(3n+3) {
     transform: rotate(5deg);
 }
 
-img.double {
+svg.double {
     margin-top: -150px !important;
     margin-bottom: -90px !important;
     z-index: 100;

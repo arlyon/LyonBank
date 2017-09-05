@@ -2,38 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d23742ea-2655-4c61-b5b2-09cd3cf6aa8b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.vscode/settings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/TOC.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/css.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/extend.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/faq.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/html.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/js.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/misc.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/usage.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/404.html" afterPath="$PROJECT_DIR$/docs/404.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/hljs.css" afterPath="$PROJECT_DIR$/docs/css/hljs.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/docs/css/main.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/normalize.css" afterPath="$PROJECT_DIR$/docs/css/normalize.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/humans.txt" afterPath="$PROJECT_DIR$/docs/humans.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/.gitignore" afterPath="$PROJECT_DIR$/docs/img/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/jazz.svg" afterPath="$PROJECT_DIR$/docs/img/jazz.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logo.svg" afterPath="$PROJECT_DIR$/docs/img/logo.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/management.svg" afterPath="$PROJECT_DIR$/docs/img/management.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/squiggles.svg" afterPath="$PROJECT_DIR$/docs/img/squiggles.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/transactions.svg" afterPath="$PROJECT_DIR$/docs/img/transactions.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/img/users.svg" afterPath="$PROJECT_DIR$/docs/img/users.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/highlight.min.js" afterPath="$PROJECT_DIR$/docs/js/highlight.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/docs/js/main.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/plugins.js" afterPath="$PROJECT_DIR$/docs/js/plugins.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/solidity.js" afterPath="$PROJECT_DIR$/docs/js/solidity.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/vendor/jquery-1.12.0.min.js" afterPath="$PROJECT_DIR$/docs/js/vendor/jquery-1.12.0.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/vendor/modernizr-2.8.3.min.js" afterPath="$PROJECT_DIR$/docs/js/vendor/modernizr-2.8.3.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/robots.txt" afterPath="$PROJECT_DIR$/docs/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/js/highlight.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/js/plugins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/js/solidity.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/js/vendor/jquery-1.12.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/js/vendor/modernizr-2.8.3.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/lyonbank.iml" afterPath="$PROJECT_DIR$/.idea/lyonbank.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/css/main.css" afterPath="$PROJECT_DIR$/docs/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/img/transactions.svg" afterPath="$PROJECT_DIR$/docs/img/transactions.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,47 +27,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitattributes" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="505">
+              <caret line="115" column="122" lean-forward="false" selection-start-line="115" selection-start-column="122" selection-end-line="115" selection-end-column="122" />
+              <folding>
+                <element signature="n#svg#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#23668#29281#0" expanded="false" />
+                <element signature="e#23697#25783#0" expanded="false" />
+                <element signature="e#25810#26051#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="130" column="12" lean-forward="true" selection-start-line="130" selection-start-column="12" selection-end-line="130" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="transactions.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/img/transactions.svg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LICENSE.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".editorconfig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.editorconfig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="305">
+              <caret line="43" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>img</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,8 +76,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/docs/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/docs/img/transactions.svg" />
+        <option value="$PROJECT_DIR$/docs/css/main.css" />
+        <option value="$PROJECT_DIR$/docs/index.html" />
       </list>
     </option>
   </component>
@@ -137,6 +119,23 @@
               <item name="lyonbank" type="b2602c69:ProjectViewProjectNode" />
               <item name="lyonbank" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lyonbank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lyonbank" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lyonbank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lyonbank" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lyonbank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lyonbank" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -175,19 +174,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504605631863</updated>
-      <workItem from="1504605633718" duration="267000" />
+      <workItem from="1504605633718" duration="1545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267000" />
+    <option name="totallyTimeSpent" value="1545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="23" width="1400" height="801" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -198,7 +199,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -257,14 +257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -273,7 +265,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
+    <entry file="file://$PROJECT_DIR$/docs/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/js/solidity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/css/hljs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/css/normalize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -289,7 +329,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -297,11 +337,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
+    <entry file="file://$PROJECT_DIR$/docs/img/logo.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="111" lean-forward="false" selection-start-line="0" selection-start-column="111" selection-end-line="0" selection-end-column="111" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/img/transactions.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="130" column="12" lean-forward="true" selection-start-line="130" selection-start-column="12" selection-end-line="130" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="115" column="122" lean-forward="false" selection-start-line="115" selection-start-column="122" selection-end-line="115" selection-end-column="122" />
+          <folding>
+            <element signature="n#svg#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#23668#29281#0" expanded="false" />
+            <element signature="e#23697#25783#0" expanded="false" />
+            <element signature="e#25810#26051#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
